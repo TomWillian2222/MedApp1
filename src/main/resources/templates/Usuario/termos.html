@@ -1,46 +1,38 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport"
-        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <script src="https://code.jquery.com/jquery-3.7.1.min.js"
-          integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-  <script src="termos.js" defer></script>
-  <title>Termos de uso</title>
-  <style>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+            integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="termos.js" defer></script>
+    <title>Termos de uso</title>
+    <style>
     @import url(https://fonts.googleapis.com/css?family=Roboto:300);
 
 .login-page {
-  width: 900px;
-  padding: 8% 0 0;
+  width: 615px;
+  padding: 3% 0 0;
   margin: auto;
 }
 .forma {
   display: flex;
   position: relative;
   z-index: 1;
-  background: #FFFFFF;
-  max-width: 900px;
+  border: 0;
+  border-radius: 8px;
   margin: 0 auto 100px;
-  padding: 60px;
+  background: #FFFFFF;
+  max-width: 700px;
+  padding: 15px;
   text-align: center;
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
 }
-.forma input {
-  font-family: "Roboto", sans-serif;
-  outline: 0;
-  background: #f2f2f2;
-  width: 100%;
-  border: 0;
-  margin: 0 0 15px;
-  padding: 15px;
-  box-sizing: border-box;
-  font-size: 14px;
-}
+
 .forma button {
   font-family: "Roboto", sans-serif;
   text-transform: uppercase;
@@ -52,33 +44,34 @@
   margin: 5px;
   padding: 15px;
   color: #FFFFFF;
-  font-size: 14px;
+  font-size: 12px;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
   cursor: pointer;
-  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+  box-shadow: 0 0 14px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.12);
 }
 .forma button.btn-recusar {
-      background-color: #ec5353;
+      background-color: #ababab;
     }
     .forma button.btn-aceitar {
-      background-color: #42be42;
+      background-color: #90a9c1;
     }
 .forma button:hover,.form button:active,.form button:focus {
-  background: #c0c0c0;
+  background: #d8bfd8;
 }
-.forma .message {
-  margin: 15px 0 0;
-  color: #b3b3b3;
-  font-size: 15px;
+
+
+.contorno {
+width: 550px;
+height: 500px;
+border: 0;
+  border-radius: 10px;
+overflow: auto;
+margin: 20px;
+padding:  20px 20px 20px 20px;
+background-color: #f1f1f1;
 }
-.forma .message a {
-  color: #6C95BB;
-  text-decoration: none;
-}
-.forma .register-form {
-  display: none;
-}
+
 .container {
   position: relative;
   z-index: 1;
@@ -112,64 +105,80 @@
 .container .info span .fa {
   color: #EF3B3A;
 }
+
 body {
-  background-color: #6C95BB;
-  font-family: "Roboto", sans-serif;
+  background: linear-gradient(120deg, #6C95BB, #d8bfd8);  font-family: "Roboto", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-</style>
+
+    </style>
 </head>
 <body>
 <div class="login-page">
-  <div class="forma">
-    <div class="login-form">
-      <h1 class="text-titulo">TERMOS DE USO E POLÍTICA DE PRIVACIDADE</h1>
+    <div class="forma">
+        <div class="login-form">
+            <h1 class="text-titulo">TERMOS DE USO E POLÍTICA DE PRIVACIDADE</h1>
 
-      <p>Este contrato é celebrado entre MedApp, com sede no Senai, doravante denominada "MedApp", e o usuário, doravante denominado "Usuário".</p>
+            <div class="contorno">
 
-      <h5>1. ACEITAÇÃO DOS TERMOS</h5>
+                <h5>1. ACEITAÇÃO DOS TERMOS</h5>
 
-      <p>Ao utilizar os serviços fornecidos por este site, o Usuário concorda em cumprir e ficar vinculado a estes Termos de Uso e à Política de Privacidade. Se o Usuário não concordar com estes termos, não deve utilizar os serviços deste site.</p>
+                <p>Ao utilizar os serviços fornecidos por este site, o Usuário concorda em cumprir e ficar vinculado a
+                    estes Termos de Uso e à Política de Privacidade. Se o Usuário não concordar com estes termos, não
+                    deve utilizar os serviços deste site.</p>
 
-      <h5>2. COLETA E USO DE DADOS</h5>
+                <h5>2. COLETA E USO DE DADOS</h5>
 
-      <p>O Usuário concorda em fornecer informações precisas, completas e atualizadas durante o processo de registro ou utilização dos serviços oferecidos pelo site. A Empresa se reserva o direito de utilizar os dados fornecidos pelo Usuário para os fins especificados.</p>
+                <p>O Usuário concorda em fornecer informações precisas, completas e atualizadas durante o processo de
+                    registro ou utilização dos serviços oferecidos pelo site. A Empresa se reserva o direito de utilizar
+                    os dados fornecidos pelo Usuário para os fins especificados.</p>
 
-      <ul>
-        <li>Prestação de serviços solicitados pelo Usuário.</li>
-        <li>Comunicação sobre alterações nos serviços ou políticas.</li>
-        <li>Envio de informações promocionais relacionadas aos produtos ou serviços da Empresa.</li>
-      </ul>
+                <ul>
+                    <li>Prestação de serviços solicitados pelo Usuário.</li>
+                    <li>Comunicação sobre alterações nos serviços ou políticas.</li>
+                    <li>Envio de informações promocionais relacionadas aos produtos ou serviços da Empresa.</li>
+                </ul>
 
-      <h5>3. SEGURANÇA DOS DADOS</h5>
+                <h5>3. SEGURANÇA DOS DADOS</h5>
 
-      <p>A Empresa adota medidas de segurança para proteger os dados do Usuário contra acesso não autorizado, divulgação ou destruição não autorizada. No entanto, o Usuário reconhece que nenhuma transmissão de dados pela internet pode ser garantida como totalmente segura e concorda em utilizar os serviços por sua conta e risco.</p>
+                <p>A Empresa adota medidas de segurança para proteger os dados do Usuário contra acesso não autorizado,
+                    divulgação ou destruição não autorizada. No entanto, o Usuário reconhece que nenhuma transmissão de
+                    dados pela internet pode ser garantida como totalmente segura e concorda em utilizar os serviços por
+                    sua conta e risco.</p>
 
-      <h5>4. COMPARTILHAMENTO DE DADOS</h5>
+                <h5>4. COMPARTILHAMENTO DE DADOS</h5>
 
-      <p>A Empresa compromete-se a não vender, alugar ou compartilhar os dados do Usuário com terceiros sem o consentimento expresso deste, exceto quando exigido por lei.</p>
+                <p>A Empresa compromete-se a não vender, alugar ou compartilhar os dados do Usuário com terceiros sem o
+                    consentimento expresso deste, exceto quando exigido por lei.</p>
 
-      <h5>5. ALTERAÇÕES NOS TERMOS DE USO E POLÍTICA DE PRIVACIDADE</h5>
+                <h5>5. ALTERAÇÕES NOS TERMOS DE USO E POLÍTICA DE PRIVACIDADE</h5>
 
-      <p>A Empresa reserva-se o direito de modificar estes Termos de Uso e a Política de Privacidade a qualquer momento. Alterações significativas serão comunicadas ao Usuário por meio de aviso no site ou por outros meios apropriados.</p>
+                <p>A Empresa reserva-se o direito de modificar estes Termos de Uso e a Política de Privacidade a
+                    qualquer momento. Alterações significativas serão comunicadas ao Usuário por meio de aviso no site
+                    ou por outros meios apropriados.</p>
 
-      <h5>6. CONSENTIMENTO</h5>
+                <h5>6. CONSENTIMENTO</h5>
 
-      <p>Ao utilizar os serviços deste site, o Usuário consente com a coleta, uso e divulgação de suas informações conforme descrito nestes Termos de Uso e na Política de Privacidade.</p>
+                <p>Ao utilizar os serviços deste site, o Usuário consente com a coleta, uso e divulgação de suas
+                    informações conforme descrito nestes Termos de Uso e na Política de Privacidade.</p>
 
-      <h5>7. LEI APLICÁVEL E JURISDIÇÃO</h5>
+                <h5>7. LEI APLICÁVEL E JURISDIÇÃO</h5>
 
-      <p>Este Contrato será regido pelas leis do Brasil. As partes concordam que qualquer disputa relacionada a este Contrato será resolvida nos tribunais competentes da jurisdição em que a Empresa estiver localizada.</p>
+                <p>Este Contrato será regido pelas leis do Brasil. As partes concordam que qualquer disputa relacionada
+                    a este Contrato será resolvida nos tribunais competentes da jurisdição em que a Empresa estiver
+                    localizada.</p>
 
-      <p>Ao utilizar este site, o Usuário reconhece ter lido, compreendido e concordado com estes Termos de Uso e a Política de Privacidade.</p>
+                <p>Ao utilizar este site, o Usuário reconhece ter lido, compreendido e concordado com estes Termos de
+                    Uso e a Política de Privacidade.</p>
 
+            </div>
 
-      <button class="btn-aceitar" id="cadastro">Aceitar</button>
-      <button class="btn-recusar" id="login">recusar</button>
+            <button class="btn-aceitar" id="cadastro">Aceitar</button>
+            <button class="btn-recusar" id="login">recusar</button>
 
+        </div>
     </div>
-  </div>
 </div>
 </body>
 </html>

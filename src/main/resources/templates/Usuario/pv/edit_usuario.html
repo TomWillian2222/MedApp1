@@ -1,78 +1,125 @@
-<h1 class="mt-5 mb-3">Perfil</h1>
-<div class="row">
-  <div class="col-5 mb-3">
-    <div class="input-group has-validation">
-      <span class="input-group-text">@</span>
-      <div class="form-floating">
-        <input type="text" class="form-control" id="nome" placeholder="Nome" required th:value="${usuario.nome}">
-        <label for="nome">Nome</label>
-      </div>
-      <div class="invalid-feedback">
-        Por favor informe o nome.
-      </div>
+<style>
+      @import url(https://fonts.googleapis.com/css?family=Roboto:300);
+
+.cadastro-page {
+  width: 500px;
+  padding: 8% 0 0;
+  margin: auto;
+}
+  .forma {
+  position: relative;
+  z-index: 1;
+  background: #FFFFFF;
+  border-radius: 8px;
+  max-width: 500px;
+  margin: 0 auto 100px;
+  padding: 25px;
+  text-align: center;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+.forma input {
+  font-family: "Roboto", sans-serif;
+  outline: 0;
+  background: #f2f2f2;
+  width: 100%;
+  border: 0;
+  border-radius: 8px;
+  margin: 0 0 15px;
+  padding: 15px;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+.forma button {
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  outline: 0;
+  background: #90a9c1;
+  width: 100%;
+  border: 0;
+  border-radius: 5px;
+  padding: 15px;
+  color: #FFFFFF;
+  font-size: 14px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+
+.forma button:hover,.form button:active,.form button:focus {
+  background: #d8bfd8;
+}
+
+.forma .message {
+  margin: 15px 0 0;
+  color: #b3b3b3;
+  font-size: 12px;
+}
+.forma .message a {
+  color: #6C95BB;
+  text-decoration: none;
+}
+.forma .register-form {
+  display: none;
+}
+.container {
+  position: relative;
+  z-index: 1;
+  max-width: 300px;
+  margin: 0 auto;
+}
+.container:before, .container:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.container .info {
+  margin: 50px auto;
+  text-align: center;
+}
+.container .info h1 {
+  margin: 0 0 15px;
+  padding: 0;
+  font-size: 36px;
+  font-weight: 300;
+  color: #1a1a1a;
+}
+.container .info span {
+  color: #4d4d4d;
+  font-size: 12px;
+}
+.container .info span a {
+  color: #000000;
+  text-decoration: none;
+}
+.container .info span .fa {
+  color: #EF3B3A;
+}
+body {
+  background: linear-gradient(120deg, #6C95BB, #d8bfd8);  font-family: "Roboto", sans-serif;
+  display: flex;
+  margin-top: 50px;
+  justify-content: center;
+  align-content: center;
+  height: 150vh;
+  width: 180vh;
+  font-family: "Roboto", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+</style>
+<div class="cadastro-page">
+  <div class="forma">
+    <div class="perfil-form">
+      <p class="text-titulo">Atualizar perfil</p>
+      <input type="nome" placeholder="Nome" id="nome" required th:value="${usuario.nome}"/>
+      <input type="email" placeholder="Email" id="email" required th:value="${usuario.email}"/>
+      <input type="number" placeholder="CPF" id="CPF" required th:value="${usuario.CPF}"/>
+      <input type="password" placeholder="Senha" id="senha" required/>
+      <input type="password" placeholder="Nova Senha" id="novaSenha" required/>
+      <input type="password" placeholder="Confirmar Senha" id="confNovaSenha" required/>
+      <button class="btn-aceitar" id="enviar">Atualizar</button>
+      <p class="message">voltar para o <a href="/Home">menu inicial</a></p>
     </div>
-  </div>
-  <div class="col-7 mb-3">
-    <div class="input-group has-validation">
-      <span class="input-group-text">@</span>
-      <div class="form-floating">
-        <input type="text" class="form-control" id="email" placeholder="e-Mail" required th:value="${usuario.email}">
-        <label for="email">e-Mail</label>
-      </div>
-      <div class="invalid-feedback">
-        Por favor informe o e-mail.
-      </div>
-    </div>
-  </div>
-  <div class="col-4 mb-3">
-    <div class="input-group has-validation">
-      <span class="input-group-text">@</span>
-      <div class="form-floating">
-        <input type="text" class="form-control" id="CPF" placeholder="CPF" required th:value="${usuario.CPF}">
-        <label for="CPF">CPF</label>
-      </div>
-      <div class="invalid-feedback">
-        Por favor informe o CPF.
-      </div>
-    </div>
-  </div>
-  <div class="col-4 mb-3">
-    <div class="input-group has-validation">
-      <span class="input-group-text">@</span>
-      <div class="form-floating">
-        <input type="password" class="form-control" id="senhaAtual" placeholder="Senha Atual" required>
-        <label for="senhaAtual">Senha Atual</label>
-      </div>
-      <div class="invalid-feedback">
-        Por favor informe a Senha Atual.
-      </div>
-    </div>
-  </div>
-  <div class="col-4 mb-3">
-    <div class="input-group has-validation">
-      <span class="input-group-text">@</span>
-      <div class="form-floating">
-        <input type="password" class="form-control" id="novaSenha" placeholder="Nova Senha" required>
-        <label for="novaSenha">Nova Senha</label>
-      </div>
-      <div class="invalid-feedback">
-        A Nova senha deve ser igual a confirmação de senha!
-      </div>
-    </div>
-  </div>
-  <div class="col-4 mb-3">
-    <div class="input-group has-validation">
-      <span class="input-group-text">@</span>
-      <div class="form-floating">
-        <input type="password" class="form-control" id="confSenha" placeholder="Confirmação de Senha" required>
-        <label for="confSenha">Confirmação de Senha</label>
-      </div>
-      <div class="invalid-feedback">
-        A Nova senha deve ser igual a confirmação de senha!
-      </div>
-    </div>
-  </div>
-  <div class="col-12">
-    <button id="salvar" class="btn btn-lg btn-primary mt-3">Salvar</button>
   </div>
 </div>

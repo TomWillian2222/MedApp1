@@ -86,5 +86,16 @@ public class C_Usuario {
     ) {
         return S_Usuario.updateUsuario(nome, email, senhaAtual, novaSenha, confSenha, session.getAttribute("usuario"));
     }
+
+    @GetMapping("/sobreSite")
+    public String getHome(HttpSession session,
+                          Model model){
+        if(session.getAttribute("usuario") != null) {
+            model.addAttribute("usuario", session.getAttribute("usuario"));
+            return "Usuario/pv/sobreSite";
+        }else{
+            return "redirect:/";
+        }
+    }
 }
 
