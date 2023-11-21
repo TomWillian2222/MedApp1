@@ -79,12 +79,13 @@ public class C_Usuario {
     @ResponseBody
     public M_Resposta postEditUsuario(@RequestParam("nome") String nome,
                                       @RequestParam("email") String email,
+                                      @RequestParam("CPF") String CPF,
                                       @RequestParam("senhaAtual") String senhaAtual,
                                       @RequestParam("novaSenha") String novaSenha,
                                       @RequestParam("confSenha") String confSenha,
                                       HttpSession session
     ) {
-        return S_Usuario.updateUsuario(nome, email, senhaAtual, novaSenha, confSenha, session.getAttribute("usuario"));
+        return S_Usuario.updateUsuario(nome, email,CPF, senhaAtual, novaSenha, confSenha, session.getAttribute("usuario"));
     }
 
     @GetMapping("/sobreSite")

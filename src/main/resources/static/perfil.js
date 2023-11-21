@@ -1,8 +1,8 @@
 function salvarPerfil(){
     let nome = $("#nome").val();
     let email = $("#email").val();
-    let relacao = $("#relacao option:selected").val();
     let CPF = $("#CPF").val();
+    let relacao = $("#relacao option:selected").val();
     let senhaAtual = $("#senhaAtual").val();
     let novaSenha = $("#novaSenha").val();
     let confSenha = $("#confSenha").val();
@@ -13,8 +13,8 @@ function salvarPerfil(){
         data:{
             nome:nome,
             email:email,
-            relacao:relacao,
             CPF:CPF,
+            relacao:relacao,
             senhaAtual:senhaAtual,
             novaSenha:novaSenha,
             confSenha:confSenha

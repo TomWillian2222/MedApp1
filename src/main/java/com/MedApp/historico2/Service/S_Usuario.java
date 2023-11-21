@@ -69,8 +69,8 @@ public class S_Usuario {
         return new M_Resposta(podeSalvar,mensagem);
     }
 
-    public static M_Resposta updateUsuario(String nome,String email, String senhaAtual,
-                                           String novaSenha, String confSenha, Object usuario){
+    public static M_Resposta updateUsuario(String nome,String email,String CPF, String senhaAtual,
+                                           String novaSenha, String confSenha,Object usuario){
         boolean podeEditar = false;
         String mensagem = "";
 
@@ -94,6 +94,7 @@ public class S_Usuario {
             if(podeEditar){
                 m_usuario.setNome(nome);
                 m_usuario.setEmail(email);
+                m_usuario.setCPF(Long.parseLong(CPF));
                 if(!S_Generico.textoEstaVazio(novaSenha)) {
                     m_usuario.setSenha(novaSenha);
                 }

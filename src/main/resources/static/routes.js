@@ -9,6 +9,12 @@ function controleRotasGet(url){
                                             $("#salvar").click(salvarPerfil);
                                         });
                                         break;
+                                         case "/calendario":
+                                                                                $.get(url,function(data){
+                                                                                    $(".container").html(data);
+                                                                                    $("#dataCalendario").click(createCalendar);
+                                                                                });
+                                                                                break;
         default:
             $.get(url,function(data){
                 $(".container").html(data);
