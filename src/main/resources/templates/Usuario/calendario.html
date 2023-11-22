@@ -112,7 +112,6 @@ i{
         display: flex;
         flex-direction: column;
     }
-
 </STYLE>
 <body>
 
@@ -136,6 +135,9 @@ i{
 <div class="container-fluid mt-3">
     <div class="row">
         <div class="col-sm-6">
+            <div class="container-fluid mt-3">
+                <div class="row">
+                    <div class="col-sm-6">
             <div class="box-calendario">
                 <div class="cabecalho-calendario d-flex align-items-center justify-content-between">
                     <div id="previous-month" class="text-end"><i class="fa-solid fa-angles-left arrow"></i></div>
@@ -215,10 +217,10 @@ i{
                 </div>
             </div>
         </div>
-        <div class="input-container">
-            <textarea class="input-field" placeholder="Digite aqui..." rows="55"></textarea>
-        </div>
-
+                    <div id="diasSelecionados"></div>
+                    <div class="input-container">
+                        <textarea class="input-field" placeholder="Digite aqui..." rows="55"></textarea>
+                    </div>
     </div>
 </div>
 </div>

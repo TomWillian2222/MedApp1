@@ -12,7 +12,13 @@ function controleRotasGet(url){
                                          case "/calendario":
                                                                                 $.get(url,function(data){
                                                                                     $(".container").html(data);
-                                                                                    $("#dataCalendario").click(createCalendar);
+                                                                                    createCalendar(new Date());
+                                                                                    $("#next-month").click(function(){
+                                                                                        atualizaCalendario(1);
+                                                                                    });
+                                                                                    $("#previous-month").click(function(){
+                                                                                        atualizaCalendario(-1);
+                                                                                    });
                                                                                 });
                                                                                 break;
         default:

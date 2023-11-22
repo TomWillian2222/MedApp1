@@ -81,7 +81,13 @@ function imprimeDatasCalendario(dataAux,dataFim,data){
 }
 
 function atualizaDataAtividades(){
-    $("#data").text(dataSelecionada.toLocaleDateString());
+   $("#data").text(dataSelecionada.toLocaleDateString());
+
+     const diasSelecionadosElement = document.getElementById('diasSelecionados');
+         diasSelecionadosElement.innerHTML = '';
+
+        diasSelecionadosElement.innerHTML = `Dias Selecionados: ${dataSelecionada.toLocaleDateString()}`;
+
 }
 
 function ativarClickCalendario(){
