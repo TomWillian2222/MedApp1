@@ -40,6 +40,7 @@
     border-top-left-radius: 0.8em;
     border-top-right-radius: 0.8em;
     height: 14vh;
+
 }
 .corpo-calendario{
     background: #fafafa;
@@ -97,6 +98,39 @@ td,i{
 i{
     font-size: 1.5em;
 }
+
+    .dia-selecionado {
+  position: absolute;
+  top: 39px; /* Ajuste a altura conforme necessário */
+  left: 75%; /* Posiciona o número no centro do retângulo */
+  transform: translateX(-50%);
+  background-color: #3498db; /* Cor de fundo do número */
+  color: white; /* Cor do texto do número */
+  border-radius: 50%; /* Para tornar o número circular */
+  width: 30px; /* Largura do número */
+  height: 30px; /* Altura do número */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 14px; /* Tamanho da fonte */
+}
+
+      .barra-superior {
+    background-color: #3498db;
+    padding: 10px;
+    color: white;
+    font-weight: bold;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    position: fixed;
+    top: 30px;
+    right: 350px;
+    width: 90%;
+    max-width: 300px;
+    height: 70px; /* Definindo a altura da barra */
+}
+
 .input-container {
         position: fixed;
         top: 10%; /* Posição ajustada para o topo da folha */
@@ -147,6 +181,7 @@ i{
                     </div>
                     <div id="next-month" class="text-start"><i class="fa-solid fa-angles-right arrow"></i></div>
                 </div>
+
                 <div class="corpo-calendario">
                     <table class="table table-bordered text-center">
                         <thead class="table-dark">
@@ -217,7 +252,9 @@ i{
                 </div>
             </div>
         </div>
-                    <div id="diasSelecionados"></div>
+                    <div class="barra-superior">
+                     </div>
+                    <div class="dia-selecionado" id="diasSelecionados"></div>
                     <div class="input-container">
                         <textarea class="input-field" placeholder="Digite aqui..." rows="55"></textarea>
                     </div>

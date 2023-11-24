@@ -1,6 +1,7 @@
 let dataCalendario = new Date();
 let dataSelecionada = new Date();
 
+
 $(document).ready(function(){
     createCalendar(dataCalendario);
 
