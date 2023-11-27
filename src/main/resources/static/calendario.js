@@ -99,11 +99,27 @@ function ativarClickCalendario(){
             dataSelecionada = new Date(parseInt(($(this).attr("id"))));
             atualizaDataAtividades();
 
-            const textoDoDia = textosPorDia[dataSelecionada.getTime()] || ''; // Recupera texto associado ao dia
-            $('.input-field').val(textoDoDia); // Define o texto do campo de texto conforme o dia selecionado
+            const textoDoDia = textosPorDia[dataSelecionada.getTime()] || '';
+            $('.input-field').val(textoDoDia).data('date', dataSelecionada.getTime());
+            // Adiciona uma classe ao dia selecionado caso haja texto associado
+            if (textoDoDia !== '') {
+                $(this).addClass('dia-com-texto');
+            } else {
+                $(this).removeClass('dia-com-texto');
+            }
         }
     });
     $('.input-field').on('input', function() {
-        textosPorDia[dataSelecionada.getTime()] = $(this).val(); // Salva o texto associado ao dia
+        const dataTexto = $(this).data('date');
+        textosPorDia[dataTexto] = $(this).val();
+        // Adiciona ou remove a classe do dia conforme o texto é inserido ou removido
+        $('td').each(function() {
+            const idDia = parseInt($(this).attr("id"));
+            if (textosPorDia[idDia]) {
+                $(this).addClass('dia-com-texto');
+            } else {
+                $(this).removeClass('dia-com-texto');
+            }
+        });
     });
 }
