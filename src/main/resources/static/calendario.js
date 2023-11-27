@@ -1,5 +1,6 @@
 let dataCalendario = new Date();
 let dataSelecionada = new Date();
+let textosPorDia = {};
 
 
 $(document).ready(function(){
@@ -90,7 +91,6 @@ function atualizaDataAtividades(){
         diasSelecionadosElement.innerHTML = `Dias Selecionados: ${dataSelecionada.toLocaleDateString()}`;
 
 }
-
 function ativarClickCalendario(){
     $('td').click(function(params){
         if(!$(this).hasClass("outro-mes")){
@@ -98,6 +98,12 @@ function ativarClickCalendario(){
             $(this).addClass('dia-ativo');
             dataSelecionada = new Date(parseInt(($(this).attr("id"))));
             atualizaDataAtividades();
+
+            const textoDoDia = textosPorDia[dataSelecionada.getTime()] || ''; // Recupera texto associado ao dia
+            $('.input-field').val(textoDoDia); // Define o texto do campo de texto conforme o dia selecionado
         }
+    });
+    $('.input-field').on('input', function() {
+        textosPorDia[dataSelecionada.getTime()] = $(this).val(); // Salva o texto associado ao dia
     });
 }
